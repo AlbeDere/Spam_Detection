@@ -96,6 +96,7 @@ for num in data[0].split():
     # Print classification result
     if predicted_label == 1:
         print('Spam')
+        mail.store(num, '+X-GM-LABELS', '"Potential Spam"')
     else:
         print('Not Spam')
     
