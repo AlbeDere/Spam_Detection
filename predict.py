@@ -5,6 +5,7 @@ from transformers import DistilBertTokenizer, DistilBertForSequenceClassificatio
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import torch
 import re
+import requirements
 
 # Function to translate text to English using Google Translate API
 def translate_to_english(text, src_lang):
@@ -40,8 +41,8 @@ IMAP_SERVER = 'imap.gmail.com'
 IMAP_PORT = 993
 
 # Your Gmail credentials
-EMAIL = 'tt724312@gmail.com'
-PASSWORD = 'lvxo tyis zwwq rrth'
+EMAIL = requirements.EMAIL
+PASSWORD = requirements.PASSWORD
 
 # Connect to Gmail IMAP server
 mail = imaplib.IMAP4_SSL(IMAP_SERVER, IMAP_PORT)
